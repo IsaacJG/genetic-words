@@ -46,7 +46,7 @@ def run(target, pop_size, mutate_chance, mutations):
 	population = generate_base_pop(pop_size, len(target), len(target)*1.5)
 	n = 0
 	while target not in population:
-		population = mutate(population, mutate_chance, mutations)
+		mutate(population, mutate_chance, mutations)
 		population = new_gen(population, target)
 		population = mate(population)
 		n += 1
